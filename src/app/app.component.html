@@ -25,7 +25,7 @@
           </div>
         </div>
 
-        <div *ngFor="let gender of genders">
+        <div class="radio" *ngFor="let gender of genders">
           <label>
             <input
               type="radio"
@@ -33,6 +33,7 @@
               [value]="gender">{{ gender }}
           </label>
         </div>
+        <span class="help-block" *ngIf="!signupForm.valid && signupForm.touched">Please enter valid data!</span>
         <button class="btn btn-primary" type="submit">Submit</button>
       </form>
     </div>
